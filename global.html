@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+<title>Speed Please</title>	
+<script>
+	const commands = {
+		speed_25x: .25,
+		speed_50x: .50,
+		speed1x: 1,
+		speed1_5x: 1.5,
+		speed2x: 2,
+		speed2_5x: 2.5,
+		speed3x: 3,
+		speed4x: 4,
+		speed5x: 5,
+		speed8x: 8,
+		speed10x: 10,
+		speed20x: 20,
+		speed100x: 100,
+	}
+
+	if (!localStorage.speed) {
+		localStorage.speed = 1;
+	}
+
+	safari.application.addEventListener("command", performCommand, false);
+	safari.application.addEventListener("open", openHandler, true);
+	safari.application.addEventListener("message", injectedMessageHandler, false);
+	// safari.application.addEventListener("onload", (event) => {}, false);
+
+	function broadcast() {
+    var ws = safari.application.browserWindows;
+    for (var i = 0; i < ws.length; i++) {
+      var ts = ws[i].tabs;
+      for (var j = 0; j < ts.length; j++) {
+        ts[j].page.dispatchMessage("setPlaybackRate", localStorage.speed);
+      }
+    }
+  };
+
+	function injectedMessageHandler(event) {
+		if (event.name === "initInjected") {
+			// event.currentTarget.activeBrowserWindow.activeTab.page.dispatchMessage("setPlaybackRate", localStorage.speed);
+			event.target.page.dispatchMessage("setPlaybackRate", localStorage.speed);
+		}
+	}
+
+	// Do something when triggered
+	function performCommand(event) {
+		if(commands[event.command]) {
+			console.log('Received command', event.command);
+			localStorage.speed = parseFloat(commands[event.command]);
+			broadcast();
+		}
+	}
+
+	// Set new window to set the saved playback rate
+	function openHandler(event) {
+		try{
+			// event.currentTarget.activeBrowserWindow.activeTab.page.dispatchMessage("setPlaybackRate", currentSpeed);
+			event.target.page.dispatchMessage("setPlaybackRate", localStorage.speed);
+		} catch(err) {}
+	}
+</script>
+</html>

@@ -1,0 +1,144 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>Author</key>
+	<string>Ahad Cove</string>
+	<key>Builder Version</key>
+	<string>14606.1.36.1.9</string>
+	<key>CFBundleDisplayName</key>
+	<string>Speed Please</string>
+	<key>CFBundleIdentifier</key>
+	<string>com.ahadcove.speedplease</string>
+	<key>CFBundleInfoDictionaryVersion</key>
+	<string>6.0</string>
+	<key>CFBundleShortVersionString</key>
+	<string>1.0</string>
+	<key>CFBundleVersion</key>
+	<string>1</string>
+	<key>Chrome</key>
+	<dict>
+		<key>Context Menu Items</key>
+		<array>
+			<dict>
+				<key>Command</key>
+				<string>speed_25x</string>
+				<key>Identifier</key>
+				<string>speed.25x</string>
+				<key>Title</key>
+				<string>Slow 0.25x</string>
+			</dict>
+			<dict>
+				<key>Command</key>
+				<string>speed_50x</string>
+				<key>Identifier</key>
+				<string>speed.50x</string>
+				<key>Title</key>
+				<string>Slow 0.50x</string>
+			</dict>
+			<dict>
+				<key>Command</key>
+				<string>speed1x</string>
+				<key>Identifier</key>
+				<string>speed1x</string>
+				<key>Title</key>
+				<string>Speed 1x</string>
+			</dict>
+			<dict>
+				<key>Command</key>
+				<string>speed1_5x</string>
+				<key>Identifier</key>
+				<string>speed1.5x</string>
+				<key>Title</key>
+				<string>Speed 1.5x</string>
+			</dict>
+			<dict>
+				<key>Command</key>
+				<string>speed2x</string>
+				<key>Identifier</key>
+				<string>speed2x</string>
+				<key>Title</key>
+				<string>Speed 2x</string>
+			</dict>
+			<dict>
+				<key>Command</key>
+				<string>speed2_5x</string>
+				<key>Identifier</key>
+				<string>speed2.5x</string>
+				<key>Title</key>
+				<string>Speed 2.5x</string>
+			</dict>
+			<dict>
+				<key>Command</key>
+				<string>speed3x</string>
+				<key>Identifier</key>
+				<string>speed3x</string>
+				<key>Title</key>
+				<string>Speed 3x</string>
+			</dict>
+			<dict>
+				<key>Command</key>
+				<string>speed5x</string>
+				<key>Identifier</key>
+				<string>speed5x</string>
+				<key>Title</key>
+				<string>Speed 5x</string>
+			</dict>
+			<dict>
+				<key>Command</key>
+				<string>speed10x</string>
+				<key>Identifier</key>
+				<string>speed10x</string>
+				<key>Title</key>
+				<string>Speed 10x</string>
+			</dict>
+			<dict>
+				<key>Command</key>
+				<string>speed20x</string>
+				<key>Identifier</key>
+				<string>speed20x</string>
+				<key>Title</key>
+				<string>Speed 20x</string>
+			</dict>
+			<dict>
+				<key>Command</key>
+				<string>speed100x</string>
+				<key>Identifier</key>
+				<string>speed100x</string>
+				<key>Title</key>
+				<string>Speed 100x</string>
+			</dict>
+		</array>
+		<key>Database Quota</key>
+		<integer>1048576</integer>
+		<key>Global Page</key>
+		<string>global.html</string>
+	</dict>
+	<key>Content</key>
+	<dict>
+		<key>Scripts</key>
+		<dict>
+			<key>End</key>
+			<array>
+				<string>index.js</string>
+			</array>
+		</dict>
+	</dict>
+	<key>Description</key>
+	<string>Speed up youtube and any other videos you watch online</string>
+	<key>DeveloperIdentifier</key>
+	<string>YP39V9H4S9</string>
+	<key>ExtensionInfoDictionaryVersion</key>
+	<string>1.0</string>
+	<key>Permissions</key>
+	<dict>
+		<key>Website Access</key>
+		<dict>
+			<key>Include Secure Pages</key>
+			<true/>
+			<key>Level</key>
+			<string>All</string>
+		</dict>
+	</dict>
+</dict>
+</plist>
